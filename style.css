@@ -1,0 +1,586 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.desktop-menu,
+ul,
+li {
+    list-style: none;
+    /* flex-wrap: wrap */
+}
+
+.main-menu li.active>a,
+.main-menu li:hover>a {}
+
+.desktop-menu ul li a {
+    font-size: 17px;
+    padding: 38px 25px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    display: block;
+}
+
+.desktop-menu li:hover>a {
+    color: #c29958;
+}
+
+.logo img {
+    padding-bottom: 25px;
+    max-width: 100%;
+}
+
+.desktop-menu .ods {
+    background-color: red;
+    font-size: 12px;
+    padding: 4px;
+    color: white;
+    position: absolute;
+    top: 26px;
+    line-height: 1;
+}
+
+.desktop-menu i.fa.fa-angle-down {
+    font-size: 15px;
+    padding: 0px 2px;
+}
+
+.megamenu {
+    /* padding: 0; */
+    width: 100%;
+    max-width: 1110px;
+    padding: 30px;
+}
+
+.megamenu ul li a {
+    padding: 0;
+}
+
+
+/* Add a more specific selector for the megamenu that excludes certain list items */
+.megamenu:not(.exclude-specific-items) ul li a {
+    padding: 0;
+}
+
+.megamenu:not(.exclude-specific-items) ul li a:hover {
+    position: relative;
+    left: 10px;
+    transition: left 0.3s ease;
+    /* Adjust the transition duration and easing function as needed */
+}
+
+.megamenu:not(.exclude-specific-items) ul {
+    padding: 0px;
+}
+
+.sub-span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+ul.megamenu:not(.exclude-specific-items) li a {
+    padding: 6px 0px;
+    transition: left 0.3s ease;
+}
+
+/* Apply the exclude-specific-items class to the specific megamenu where you want to exclude those items */
+.exclude-specific-items li {
+    display: none;
+}
+
+.megamenu {
+    width: 100%;
+    max-width: 1110px;
+}
+
+.megamenu ul li a {
+    transition: transform 0.5s ease !important;
+    /* Specify the property to transition and the timing function */
+    display: inline-block !important;
+    /* Ensure inline-block for proper positioning */
+}
+
+/* Add a hover effect to move the links to the right on hover */
+.megamenu ul li:hover a {
+    transform: translateX(5px) !important;
+}
+
+
+.megamenu ul {
+    padding: 0px;
+}
+
+.sub-span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+ul.megamenu li a {
+    padding: 6px 0px;
+}
+
+/* 
+    .dropdown-content {
+        display: none;
+        width: 100%!important;
+        max-width: 1140px!important;
+        position: absolute;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+        background-color: antiquewhite;
+    }
+    .dropdown-content li a{
+        padding: 0!important;
+        
+    } */
+/* Additional styles if needed */
+.dropdown {
+    position: relative;
+    display: inline-block;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    padding: 25px 10px !important;
+    /* background-color: #f1f1f1; */
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    width: calc(100% + 20px);
+    transform: translate(-14%);
+    max-width: 1140px;
+    margin-left: revert-layer;
+
+}
+
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 0px !important;
+    text-decoration: none;
+    display: block;
+    font-weight: 400 !important;
+}
+
+.dropdown-content a {
+    font-weight: 600;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.dropdown-content a:hover {
+    color: #27AFE8;
+
+
+}
+
+.drp-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    /* Allow items to wrap to the next row */
+}
+
+.drp-item {
+    flex: 1;
+
+    margin: 0 5px;
+    /* Add margin between items if needed */
+}
+
+.drp-span {
+    margin-bottom: 15px;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    border-bottom: 2px solid #c29958;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+
+}
+
+.dropdown-content ul {
+    padding: 0px;
+}
+
+.btm-inner,
+.btm-inner2 {
+    position: relative;
+}
+
+.btm-inner::before,
+.btm-inner2::before {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    z-index: 2;
+    display: block;
+    content: '';
+    width: 50%;
+    height: 100%;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, .3) 100%);
+    -webkit-transform: skewX(-25deg);
+    transform: skewX(-25deg);
+}
+
+.btm-inner:hover::before,
+.btm-inner2:hover::before {
+    -webkit-animation: shine .75s;
+    animation: shine .75s;
+}
+
+@-webkit-keyframes shine {
+    100% {
+        left: 50%;
+    }
+}
+
+@keyframes shine {
+    100% {
+        left: 50%;
+    }
+}
+
+.drp-btn img {
+    display: block;
+    margin: auto;
+}
+
+.drp-btn {
+    padding: 25px 0px;
+}
+
+.header-search-container {
+    position: relative;
+}
+
+.header-search-container form {
+    display: flex;
+    align-items: center;
+}
+
+.header-search-container input {
+    box-sizing: border-box;
+    padding: 15px 45px;
+    border-radius: 30px;
+    border: none;
+    background-color: ghostwhite;
+    transition: border 0.2s;
+}
+
+
+.custom-list li {
+    margin-left: 30px;
+    /* Adjust the margin as needed */
+}
+
+input:focus {
+    border: 2px solid #c29958;
+    outline: none;
+}
+
+.header-configure-area i {
+    font-size: 26px;
+}
+
+.header-configure-area i:hover {
+    color: #c29958;
+}
+
+.header-search-container button {
+    position: absolute;
+    border: none;
+    background: transparent;
+    font-size: larger;
+    left: 16px;
+}
+
+.header-right {
+    display: flex;
+    align-items: baseline;
+}
+
+.header-configure-area {
+    margin-left: auto;
+    /* Pushes the configure area to the right */
+}
+
+.bigcounter {
+    position: absolute;
+    top: -9px;
+    background: red;
+    padding: 2px 5px;
+    border-radius: 10px;
+    font-size: 12px;
+    color: white;
+    left: 23px;
+}
+
+.user-menu {
+    padding: 0;
+    list-style: none;
+}
+
+.user-hover {
+    position: relative;
+    cursor: pointer;
+}
+
+.header-configure-area ul {
+    padding: 0;
+}
+
+/* Hide the dropdown content by default */
+.sa {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    left: -27px;
+}
+
+/* Style the dropdown links */
+.sa a {
+    display: block;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Change color on hover */
+.sa a:hover {
+    color: #c29958;
+}
+
+/* Show the dropdown content when hovering over the user-hover element */
+.user-hover:hover .sa {
+    display: block;
+}
+
+@media screen and (max-width: 1024px) {
+    .logo img {
+        width: 100px;
+    }
+
+    .desktop-menu ul li a {
+        /* font-size: 15px; */
+        padding: 18px 15px;
+
+    }
+
+    .desktop-menu ul {
+        padding-left: 0;
+    }
+
+    .header-search-container {
+        display: none;
+    }
+
+    .dropdown-content {
+        width: calc(72% + 20px);
+    }
+
+    .dropdown-content ul li a {
+        padding: 10px 0px !important;
+    }
+
+
+}
+
+.search-box-mobile {
+    position: fixed;
+    /* Change to fixed to keep it visible when scrolling */
+    top: 0;
+    right: 0;
+    border-left: 1px solid gainsboro;
+    width: 100%;
+    height: 100%;
+    max-width: 360px;
+    background-color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    /* Include padding in width calculation */
+    z-index: 1000;
+    /* Adjust the z-index as needed */
+}
+
+.search-box-mobile input {
+    width: calc(100% - 16px);
+    /* Adjust padding and border widths */
+    padding: 8px;
+    border-radius: 4px;
+    /* Add a slight border-radius for a cleaner look */
+    outline: 0;
+    border: 1px solid #ccc;
+    /* Add a border for better visibility */
+}
+
+.search-box-mobile .fa-search {
+    position: absolute;
+    right: 43px;
+    top: 32px;
+}
+
+
+.mobile-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu li {
+    display: block;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 4px 0px;
+}
+
+/* Style for the clickable button */
+.mobile-menu a {
+    display: block;
+    padding: 0px;
+
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/* Style for the dropdown content (hidden by default) */
+.dropdown-mpb {
+    min-width: 160px;
+    z-index: 1;
+    transition: max-height 1s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+}
+
+span.menu-expand {
+    position: absolute;
+    right: 0;
+    font-size: 26px;
+    top: -8px;
+}
+
+/* Style for the dropdown links */
+.dropdown-mpb a {
+    color: black;
+    padding: 0;
+    text-decoration: none;
+    display: block;
+    font-weight: 500;
+}
+
+.mobile-menu {
+    font-weight: 500;
+}
+
+.menu-item-has-children a {
+    color: black;
+}
+
+
+.mobile-menu li.active .dropdown-mpb {
+    display: block;
+    max-height: 1000px;
+}
+
+ul.mobile-menu {
+    margin: 30px 0px;
+}
+
+.mob-info {
+    padding: 20px 0px;
+    border-top: 1px solid #80808047;
+}
+
+.social-media ul {
+    display: flex;
+    padding: 0;
+    /* justify-content: flex-start;  */
+}
+
+.social-media ul li {
+    padding-right: 20px;
+}
+
+.social-media .fa-brands {
+    font-size: 24px;
+}
+
+i.fa-solid.fa-xmark.close-icon {
+    background: burlywood;
+    font-size: 36px;
+    padding: 3px 6px;
+    position: absolute;
+    left: -39px;
+    top: 0;
+    color: white;
+}
+
+/* .mobile-inner-content {
+    display: none;
+} */
+
+
+
+@media only screen and (max-width: 991px) {
+    /* This media query targets screens up to 991px width, which includes tablets */
+
+
+    /* aside {
+    background: #31303094;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 55;
+} */
+
+}
+
+@media only screen and (max-width: 991px) {
+    /* This media query targets screens up to 991px width, which includes tablets */
+
+    .ccxcx {
+        display: none;
+        /* Hide the ccxcx div on tablets */
+    }
+
+    .col-lg-2,
+    .col-lg-4 {
+        width: 50%;
+    }
+
+    .tongle {
+        margin-left: 30px;
+    }
+
+    .tongle .fa-bars {
+        font-size: 30px;
+        color: #c29958;
+    }
+
+    .tongle {
+        display: block !important;
+    }
+}
+
+.tongle {
+    display: none;
+}
+
+.mobile-inner-content {
+        display: none;
+    }
+
+.mobile-inner-content.active {
+        display: block;
+    }
